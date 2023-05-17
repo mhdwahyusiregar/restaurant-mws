@@ -118,7 +118,13 @@ body {
 }
 
 #hamburger-menu {
-  display: none;
+  font-size: 44px;
+  margin: auto;
+  display: block;
+  /* width: 30px; */
+
+  min-height: 44px;
+  min-width: 44px;
 }
 
 /*
@@ -358,6 +364,7 @@ footer .credit a {
 main:focus,
 h1:focus,
 h2:focus,
+a:focus,
 article:focus,
 p:focus,
 img:focus,
