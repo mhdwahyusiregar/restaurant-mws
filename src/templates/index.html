@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <linkgit
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Featers icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <title>Restaurant MWS</title>
+  </head>
+  <body>
+    <header class="header">
+      <a tabindex="0" href="#maincontent" class="skip-link">Menuju ke konten</a>
+      <!-- <div class="header__inner">
+        <h1 class="header__title">Restaurant MWS</h1>
+      </div>
+      <a id="menu" class="header__menu">☰</a> -->
+    </header>
+
+    <nav id="drawer" class="navbar">
+      <a
+        tabindex="0"
+        href="https://www.instagram.com/mwahyusrg/"
+        class="navbar-logo"
+        target="_blank"
+        ><i data-feather="instagram"></i> Restaurant<span>MWS</span>.</a
+      >
+
+      <div class="navbar-nav">
+        <a tabindex="0" href="#">Home</a>
+        <a tabindex="0" href="#">Favorite</a>
+        <a
+          tabindex="0"
+          href="https://www.instagram.com/mwahyusrg/"
+          target="_blank"
+          >About Us</a
+        >
+        <a tabindex="0" href="#">Contact Me</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a tabindex="0" href="#" id="search">
+          <i data-feather="search" aria-label="search"></i
+        ></a>
+        <a tabindex="0" href="#" id="shopping-cart" aria-label="shopping-cart">
+          <i data-feather="shopping-cart"></i
+        ></a>
+        <a
+          tabindex="0"
+          href="#"
+          id="hamburger-menu"
+          aria-label="hamburger menu"
+        >
+          <i data-feather="menu"></i
+        ></a>
+      </div>
+    </nav>
+
+    <div tabindex="0" class="hero" aria-label="hero images restaurantMWS">
+      <div class="hero__inner">
+        <!-- <h1 class="hero__title">
+          Unveiling Gastronomic Gems Your Guide to Highly-Rated Restaurants
+        </h1>
+        <p class="hero__tagline">Unleashing the Best Restaurants Near You</p> -->
+      </div>
+    </div>
+    <main id="maincontent">
+      <section class="content">
+        <div class="latest">
+          <h1 tabindex="0" class="latest__label">Explore Restaurant</h1>
+          <div id="restaurantList" class="posts">
+            <!-- Daftar restoran akan ditampilkan di sini -->
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="content">
+       
+        <div class="atest">
+          <h1 class="latest__label">Explore Restaurant</h1>
+          <div class="posts">
+            <article class="post-item">
+              <img
+                class="post-item__thumbnail"
+                src="images/post-1.png"
+                alt="Gambar dua orang wanita sedang memegang laptop"
+              />
+              <div class="post-item__content">
+                <p class="post-item__date">
+                  About 10 Hours Ago By
+                  <a href="#" class="post-item__date__author"
+                    >Dicoding Intern</a
+                  >
+                </p>
+                <h1 class="post-item__title">
+                  <a href="#">Kenapa Harus Belajar Coding Dari Sekarang?</a>
+                </h1>
+                <p class="post-item__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aspernatur atque autem culpa laborum odio similique voluptas.
+                  A ab animi ducimus earum explicabo hic molestias repudiandae
+                  sunt. Consectetur consequuntur dolorum excepturi, fugit, minus
+                  nemo non quae quaerat quod recusandae reprehenderit totam,
+                  unde. Aliquid autem doloremque impedit quod tempora tenetur
+                  totam vero.
+                </p>
+              </div>
+            </article>
+            <article class="post-item">
+              <img
+                class="post-item__thumbnail"
+                src="images/post-2.jpg"
+                alt="Github logo"
+              />
+              <div class="post-item__content">
+                <p class="post-item__date">
+                  About 10 Hours Ago By
+                  <a href="#" class="post-item__date__author"
+                    >Alfian Y Abdullah</a
+                  >
+                </p>
+                <h1 class="post-item__title">
+                  <a href="#">Apa itu Rate Limit pada Github API?</a>
+                </h1>
+                <p class="post-item__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aspernatur atque autem culpa laborum odio similique voluptas.
+                  A ab animi ducimus earum explicabo hic molestias repudiandae
+                  sunt. Consectetur consequuntur dolorum excepturi, fugit, minus
+                  nemo non quae quaerat quod recusandae reprehenderit totam,
+                  unde. Aliquid autem doloremque impedit quod tempora tenetur
+                  totam vero.
+                </p>
+              </div>
+            </article>
+            <article class="post-item">
+              <img
+                class="post-item__thumbnail"
+                src="images/post-3.jpg"
+                alt="Seorang lelaki sendang memakai filter instagram"
+              />
+              <div class="post-item__content">
+                <p class="post-item__date">
+                  About 10 Hours Ago By
+                  <a href="#" class="post-item__date__author"
+                    >Aditya Tri Nugroho</a
+                  >
+                </p>
+                <h1 class="post-item__title">
+                  <a href="#"
+                    >2 Langkah Utama Membuat Filter Kece di Instagram</a
+                  >
+                </h1>
+                <p class="post-item__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aspernatur atque autem culpa laborum odio similique voluptas.
+                  A ab animi ducimus earum explicabo hic molestias repudiandae
+                  sunt. Consectetur consequuntur dolorum excepturi, fugit, minus
+                  nemo non quae quaerat quod recusandae reprehenderit totam,
+                  unde. Aliquid autem doloremque impedit quod tempora tenetur
+                  totam vero.
+                </p>
+              </div>
+            </article>
+
+            <article class="post-item">
+              <img
+                class="post-item__thumbnail"
+                src="images/post-4.jpg"
+                alt="Seorang lelaki dengan ekspresi bingung"
+              />
+              <div class="post-item__content">
+                <p class="post-item__date">
+                  About 10 Hours Ago By
+                  <a href="#" class="post-item__date__author"
+                    >Dimas Catur Wibowo</a
+                  >
+                </p>
+                <h1 class="post-item__title">
+                  <a href="#"
+                    >Kenapa Anak Sosial Hijrah Belajar Kotlin Android?</a
+                  >
+                </h1>
+                <p class="post-item__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aspernatur atque autem culpa laborum odio similique voluptas.
+                  A ab animi ducimus earum explicabo hic molestias repudiandae
+                  sunt. Consectetur consequuntur dolorum excepturi, fugit, minus
+                  nemo non quae quaerat quod recusandae reprehenderit totam,
+                  unde. Aliquid autem doloremque impedit quod tempora tenetur
+                  totam vero.
+                </p>
+              </div>
+            </article>
+
+            <article class="post-item">
+              <img
+                class="post-item__thumbnail"
+                src="images/post-5.png"
+                alt="Seorang lelaki memakai baju abu-abu"
+              />
+              <div class="post-item__content">
+                <p class="post-item__date">
+                  About 10 Hours Ago By
+                  <a href="#" class="post-item__date__author"
+                    >Mutiara Arumsari</a
+                  >
+                </p>
+                <h1 class="post-item__title">
+                  <a href="#">Programmer Atau Pro Gamer, Kamu Team Mana?</a>
+                </h1>
+                <p class="post-item__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aspernatur atque autem culpa laborum odio similique voluptas.
+                  A ab animi ducimus earum explicabo hic molestias repudiandae
+                  sunt. Consectetur consequuntur dolorum excepturi, fugit, minus
+                  nemo non quae quaerat quod recusandae reprehenderit totam,
+                  unde. Aliquid autem doloremque impedit quod tempora tenetur
+                  totam vero.
+                </p>
+              </div>
+            </article>
+
+            <article class="post-item">
+              <img
+                class="post-item__thumbnail"
+                src="images/post-6.png"
+                alt="Seorang wanita di depan komputer sedang pusing"
+              />
+              <div class="post-item__content">
+                <p class="post-item__date">
+                  About 10 Hours Ago By
+                  <a href="#" class="post-item__date__author"
+                    >Mutiara Arumsari</a
+                  >
+                </p>
+                <h1 class="post-item__title">
+                  <a href="#">Algoritma Dulu Ngoding Kemudian</a>
+                </h1>
+                <p class="post-item__description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aspernatur atque autem culpa laborum odio similique voluptas.
+                  A ab animi ducimus earum explicabo hic molestias repudiandae
+                  sunt. Consectetur consequuntur dolorum excepturi, fugit, minus
+                  nemo non quae quaerat quod recusandae reprehenderit totam,
+                  unde. Aliquid autem doloremque impedit quod tempora tenetur
+                  totam vero.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section> -->
+    </main>
+    <footer>
+      <div class="socials">
+        <a
+          tabindex="0"
+          href="https://www.instagram.com/mwahyusrg/"
+          target="_blank"
+          ><i data-feather="instagram"></i> instagram</a
+        >
+        <a tabindex="0" href="https://wa.me/6285762013173" target="_blank"
+          ><i data-feather="phone-call"></i> Whatsapp</a
+        >
+        <a tabindex="0" href="#"><i data-feather="facebook"></i>Facebook</a>
+      </div>
+
+      <div class="links">
+        <a tabindex="0" href="#">Home</a>
+        <a tabindex="0" href="#">Favorite</a>
+        <a
+          tabindex="0"
+          href="https://www.instagram.com/mwahyusrg/"
+          target="_blank"
+          >About Us</a
+        >
+        <a tabindex="0" href="#">Contact Me</a>
+      </div>
+
+      <div class="credit">
+        <p tabindex="0">
+          Created by
+          <a href="https://www.instagram.com/mwahyusrg/" target="_blank">
+            muhammadwahyusiregar</a
+          >. | &copy; 2023.
+        </p>
+      </div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
