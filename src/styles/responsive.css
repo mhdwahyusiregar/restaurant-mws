@@ -102,9 +102,37 @@
     min-width: 1000px;
   }
 }
+/* desktop */
 
 /* Tablet */
-@media (max-width: 1126px) {
+@media screen and (max-width: 1126px) {
+  .navbar .navbar-logo {
+    font-size: 20px;
+  }
+  #hamburger-menu {
+    display: none;
+  }
+  .navbar-extra .shop {
+    display: none;
+  }
+  .navbar .navbar-nav {
+    display: flex;
+  }
+  .navbar .navbar-nav a {
+    display: flex;
+    line-height: 44px;
+    font-size: 20px;
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: center;
+    align-item: center;
+  }
+  .hero {
+    margin-top: 5.3rem;
+  }
+}
+/* HP */
+@media (max-width: 723px) {
   html {
     font-size: 62.5%;
   }
@@ -114,6 +142,8 @@
   }
 
   .navbar .navbar-nav {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     right: -100%;
@@ -130,7 +160,7 @@
 
   .navbar .navbar-nav a {
     display: block;
-    margin: 1.5rem;
+    /* margin: 1.5rem; */
     padding: 0.5rem;
     font-size: 2rem;
     min-height: 44px;
@@ -141,7 +171,7 @@
     height: 44px;
     width: 44px;
     margin: auto;
-    display: flex;
+    /* display: flex; */
   }
 
   .navbar-extra .shop {
@@ -167,10 +197,12 @@
   }
 
   .navbar .navbar-extra .shop {
+    display: flex;
+    padding-top: 12px;
     min-height: 44px;
     min-width: 44px;
     text-align: center;
-
+    justify-content: center;
     line-height: 44px;
     margin: auto;
   }
@@ -192,7 +224,7 @@
   }
 }
 
-@media (min-width: 1127px) {
+@media screen and (min-width: 1127px) {
   #hamburger-menu {
     display: none;
   }
@@ -240,6 +272,9 @@
     flex-direction: row;
     align-items: flex-start;
     padding: 20px;
+  }
+  .navbar .navbar-nav {
+    width: 20rem;
   }
 
   .navbar .navbar-logo {
