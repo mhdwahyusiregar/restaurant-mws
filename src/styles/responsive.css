@@ -136,6 +136,7 @@
     min-height: 44px;
     min-width: 44px;
   }
+  /* ---------OLD--------- */
   .navbar-extra {
     height: 44px;
     width: 44px;
@@ -152,6 +153,28 @@
     line-height: 44px;
     margin: auto;
   }
+  /* ------OLD-------- */
+  .navbar {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .navbar .navbar-extra {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar .navbar-extra .shop {
+    min-height: 44px;
+    min-width: 44px;
+    text-align: center;
+
+    line-height: 44px;
+    margin: auto;
+  }
+  /* ------new----- */
 
   .navbar .navbar-nav a::after {
     transform-origin: 0 0;
@@ -163,6 +186,9 @@
 
   .hero {
     margin-top: 9rem;
+  }
+  .credit .credit-link {
+    padding: 20px 0;
   }
 }
 
@@ -206,5 +232,56 @@
   }
   .navbar-nav a {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navbar {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .navbar .navbar-logo {
+    font-size: 14px; /* Atur ukuran font sesuai kebutuhan */
+  }
+  .navbar .navbar-extra {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar .navbar-extra .shop {
+    min-height: 44px;
+    min-width: 44px;
+    text-align: center;
+    line-height: 44px;
+    margin: auto;
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .socials .socials-list {
+    font-size: 10px; /* Atur ukuran font sesuai kebutuhan */
+  }
+  .socials .socials-list {
+    padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .socials .socials-list {
+    text-align: center;
+    line-height: 44px;
+    margin: auto;
+  }
+
+  .credit .credit-link {
+    padding: 20px 0;
   }
 }
