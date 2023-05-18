@@ -104,7 +104,7 @@
 }
 
 /* Tablet */
-@media (max-width: 1000px) {
+@media (max-width: 1126px) {
   html {
     font-size: 62.5%;
   }
@@ -129,13 +129,28 @@
   }
 
   .navbar .navbar-nav a {
-    /* color: var(--bg); */
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
     font-size: 2rem;
     min-height: 44px;
     min-width: 44px;
+  }
+  .navbar-extra {
+    height: 44px;
+    width: 44px;
+    margin: auto;
+    display: flex;
+  }
+
+  .navbar-extra .shop {
+    height: 44px;
+    width: 44px;
+
+    text-align: center;
+    font-size: 44px;
+    line-height: 44px;
+    margin: auto;
   }
 
   .navbar .navbar-nav a::after {
@@ -151,8 +166,45 @@
   }
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1127px) {
   #hamburger-menu {
     display: none;
+  }
+  .navbar-extra {
+    margin-left: 44px;
+    margin-right: 44px;
+    min-height: 44px;
+    min-width: 44px;
+    /* margin: auto; */
+    display: flex;
+  }
+
+  .navbar-extra .shop {
+    min-height: 44px;
+    min-width: 44px;
+
+    text-align: center;
+    font-size: 44px;
+    line-height: 44px;
+    margin: auto;
+  }
+  .navbar-nav {
+    /* margin-left: 44px;
+    margin-right: 44px; */
+    min-height: 44px;
+    min-width: 44px;
+    margin: auto;
+    display: flex;
+  }
+
+  .navbar-nav .link {
+    min-height: 44px;
+    min-width: 44px;
+    text-align: center;
+    line-height: 44px;
+    margin: auto;
+  }
+  .navbar-nav a {
+    font-size: 18px;
   }
 }

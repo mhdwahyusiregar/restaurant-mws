@@ -65,7 +65,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22.4px 7%;
+  padding: 20px 7%;
   background-color: rgba(244, 249, 249, 0.8);
   border-bottom: 1px solid #513c28;
   position: fixed;
@@ -76,10 +76,16 @@ body {
 }
 
 .navbar .navbar-logo {
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  line-height: 44px;
   font-size: 2rem;
   font-weight: 700;
   color: #47474f;
   font-style: italic;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 .navbar .navbar-logo span {
@@ -111,7 +117,9 @@ body {
 
 .navbar .navbar-extra a {
   color: #47474f;
-  margin: 0 0.5rem;
+  margin: 0 1rem;
+  min-height: 44px;
+  min-width: 44px;
 }
 .navbar .navbar-extra a:hover {
   color: #d3756b;
@@ -122,7 +130,7 @@ body {
   margin: auto;
   display: block;
   /* width: 30px; */
-
+  padding-left: 12px;
   min-height: 44px;
   min-width: 44px;
 }
@@ -132,7 +140,7 @@ body {
  */
 
 .hero {
-  margin-top: 5rem;
+  margin-top: 5.8rem;
   display: flex;
   align-items: center;
   min-height: 380px;
@@ -335,7 +343,10 @@ footer .socials {
 
 footer .socials a {
   color: #fff;
-  margin: 1rem;
+  /* margin: 1rem; */
+  min-width: 44px;
+  min-height: 44px;
+  padding: 16px;
 }
 
 footer .socials a:hover,
@@ -349,7 +360,9 @@ footer .links {
 
 footer .links a {
   color: #fff;
-  padding: 0.5rem 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 16px 10px;
 }
 
 footer .credit {
@@ -359,6 +372,9 @@ footer .credit {
 footer .credit a {
   color: #fff;
   font-weight: 700;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 16px 0;
 }
 
 main:focus,
@@ -371,16 +387,21 @@ img:focus,
 div[tabindex="0"]:focus,
 button:focus {
   border: 2px solid #1a1a1a;
+  cursor: pointer;
 }
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -54px;
   left: 0;
-  padding: 8px;
+  /* padding: 8px; */
   background-color: #a75d5d;
   color: white;
   z-index: 10000;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 16px 0;
+  font-size: 10px;
 }
 
 .skip-link:focus {
