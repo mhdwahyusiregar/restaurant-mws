@@ -52,6 +52,25 @@
   .post-item__description {
     font-size: 14px;
   }
+
+   
+  .restaurants {
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+  .restaurant {
+    grid-template-columns: auto 1fr;
+  }
+ 
+  .restaurant .restaurant__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+ 
+  .restaurant .restaurant__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -109,7 +128,7 @@
   .navbar .navbar-logo {
     font-size: 20px;
   }
-  #hamburger-menu {
+  #hamburgerMenu {
     display: none;
   }
   .navbar-extra .shop {
@@ -137,7 +156,7 @@
     font-size: 62.5%;
   }
 
-  #hamburger-menu {
+  #hamburgerMenu {
     display: inline-block;
   }
 
@@ -223,9 +242,63 @@
     padding: 20px 0;
   }
 }
+@media (max-width: 848px) {
+  .detail-drink, .detail-food {
+    display: flex;
+    flex-wrap: wrap; /* Membungkus li ke dalam beberapa baris */
+  }
+  
+  .detail-drink ul, .detail-food ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+  }
+  
+  .detail-drink li, .detail-food li {
+    padding: 0.5em 4rem;
+    width: 32.8%;
+    text-align: center;
+    background-color: Beige;
+    border: 0.5px solid #f0e3ca;
+    border-width: 0 0 0.5px;
+    margin-bottom: 0.2rem;
+    margin-right: 0.2rem;
+  }
+}
+@media (max-width: 555px) {
+  .detail-drink li,.detail-food li {
+    display: flex;
+    padding: 0.5em 1.5rem 0.5em 0.5rem;
+    justify-content: center;
+    align-item: center;
+    width: 24.5%;
+  }
+}
+@media (max-width: 493px) {
+  .detail-drink li,.detail-food li {
+    display: flex;
+    padding: 0.5em 1.5rem 0.5em 0.5rem;
+    justify-content: center;
+    align-item: center;
+    width: 32.8%;
+  }
+}
+
+@media (max-width: 470px) {
+  .detail-drink li,.detail-food li {
+    display: flex;
+    padding-left: 1rem;
+    justify-content: left;
+    align-item: left;
+    width: 100%;
+  }
+}
 
 @media screen and (min-width: 1127px) {
-  #hamburger-menu {
+  #hamburgerMenu {
     display: none;
   }
   .navbar-extra {
@@ -318,5 +391,23 @@
 
   .credit .credit-link {
     padding: 20px 0;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .restaurants {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+ 
+@media screen and (min-width: 1200px) {
+  .restaurants {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+ 
+@media screen and (min-width: 1600px) {
+  .restaurants {
+      grid-template-columns: repeat(5, 1fr);
   }
 }
