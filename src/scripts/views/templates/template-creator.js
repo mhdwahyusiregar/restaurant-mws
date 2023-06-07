@@ -62,7 +62,7 @@ const createDaftarRestaurantTemplate = (restaurant) => `
       </div>
     </div>
     <div class="restaurant-item__content" tabindex="0">
-      <h3><a href="/#/detail/${restaurant.id}" class="name" tabindex="-1">${restaurant.name}</a></h3>
+      <h3><a href="/#/detail/${restaurant.id}" class="name">${restaurant.name}</a></h3>
       <p>${restaurant.description}</p>
       <h4>City : ${restaurant.city}</h4>
     </div>

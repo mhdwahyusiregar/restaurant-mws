@@ -130,13 +130,15 @@ body {
 }
 
 #hamburgerMenu {
-  font-size: 44px;
+  font-size: 24px;
   margin: auto;
+  justify-content: center;
+  align-item: center;
   display: block;
-  /* width: 30px; */
-  padding-left: 12px;
+  background: none;
   min-height: 44px;
   min-width: 44px;
+  
 }
 
 /*
