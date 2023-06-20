@@ -152,7 +152,7 @@ body {
   min-height: 380px;
   /* width: 100%; */
   text-align: center;
-  background-image: url("../public/images/heros/hero-image_2.jpg");
+  background-image: url("../public/images/heros/hero-image_2-bg.jpg");
   background-position: center;
   background-color: green;
   background-repeat: no-repeat;
@@ -378,12 +378,12 @@ main {
   left: 0;
   display: inline-block;
   background-color: #d3756b;
-  color: white;
+  color: #000000;
 }
  
 .restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
   margin-left: 10px;
-  
+  color: #000000;
 }
  
 .restaurant-item .restaurant-item__content {
@@ -569,12 +569,19 @@ main {
   cursor: pointer;
 }
 
+/* input test */
+#query {
+  min-width: 44px;
+  min-height: 44px;
+  margin: 1rem 0 0;
+}
 
 
 /*
  * footer
  */
 footer {
+  color: #000000;
   background-color: #d3756b;
   text-align: center;
   padding: 1rem 0 3rem;
@@ -586,7 +593,7 @@ footer .socials {
 }
 
 footer .socials a {
-  color: #fff;
+  color: #000000;
   /* margin: 1rem; */
   min-width: 44px;
   min-height: 44px;
@@ -603,7 +610,7 @@ footer .links {
 }
 
 footer .links a {
-  color: #fff;
+  color: #000000;
   min-width: 44px;
   min-height: 44px;
   padding: 16px 10px;
@@ -614,7 +621,7 @@ footer .credit {
 }
 
 footer .credit a {
-  color: #fff;
+  color: #000000;
   font-weight: 700;
   min-width: 44px;
   min-height: 44px;

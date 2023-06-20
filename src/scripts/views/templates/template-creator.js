@@ -55,28 +55,28 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createDaftarRestaurantTemplate = (restaurant) => `
   <div class="restaurant-item" tabindex="0">
     <div class="restaurant-item__header">
-      <img class="restaurant-item__header__poster" alt="${restaurant.name}"
+      <img class="restaurant-item__header__poster lazyload" alt="${restaurant.name || '-'}"
         src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" tabindex="0">
       <div class="restaurant-item__header__rating" tabindex="0">
-        <p><span class="restaurant-item__header__rating__score">⭐️ ${restaurant.rating}</span></p>
+        <p><span class="restaurant-item__header__rating__score">⭐️ ${restaurant.rating || '-'}</span></p>
       </div>
     </div>
     <div class="restaurant-item__content" tabindex="0">
-      <h3><a href="/#/detail/${restaurant.id}" class="name">${restaurant.name}</a></h3>
-      <p>${restaurant.description}</p>
-      <h4>City : ${restaurant.city}</h4>
+      <h3 class="restaurant__name"><a href="/#/detail/${restaurant.id}" class="name">${restaurant.name || '-'}</a></h3>
+      <p>${restaurant.description || '-'}</p>
+      <h4>City : ${restaurant.city || '-'}</h4>
     </div>
   </div>
 `;
 
-const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+const createLikeRestaurantButtonTemplate = () => `
+  <button aria-label="like this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
-const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+const createUnlikeRestaurantButtonTemplate = () => `
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
@@ -84,6 +84,6 @@ const createLikedButtonTemplate = () => `
 export {
   createDaftarRestaurantTemplate,
   createRestaurantDetailTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createLikeRestaurantButtonTemplate,
+  createUnlikeRestaurantButtonTemplate,
 };

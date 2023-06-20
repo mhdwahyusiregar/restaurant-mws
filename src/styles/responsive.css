@@ -4,6 +4,9 @@
 }
 
 @media screen and (max-width: 499px) {
+  .hero {
+    background-image: url("../public/images/heros/hero-image_2-small.jpg");
+  }
   .navbar .navbar-extra {
     display: flex;
     justify-content: center;
@@ -168,7 +171,7 @@
     right: -100%;
     background-color: #fff;
     width: 30rem;
-    height: 100vh;
+    height: 40vh;
     transition: 0.3s;
   }
 
@@ -243,6 +246,9 @@
   }
 }
 @media (max-width: 848px) {
+  .hero {
+    background-image: url("../public/images/heros/hero-image_2-large.jpg");
+  }
   .detail-drink, .detail-food {
     display: flex;
     flex-wrap: wrap; /* Membungkus li ke dalam beberapa baris */
@@ -395,6 +401,9 @@
 }
 
 @media screen and (min-width: 850px) {
+  .hero {
+    background-image: url("../public/images/heros/hero-image_2-bg.jpg");
+  }
   .restaurants {
     grid-template-columns: repeat(3, 1fr);
   }
