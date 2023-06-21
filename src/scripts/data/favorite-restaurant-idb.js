@@ -36,11 +36,11 @@ const FavoriteRestaurantIdb = {
   // eslint-disable-next-line no-unused-vars, no-empty-function
   async searchRestaurants(query) {
     return (await this.getAllRestaurants()).filter((restaurant) => {
-      const loweredCaseRestaurantTitle = (restaurant.title || '-').toLowerCase();
-      const jammedRestaurantTitle = loweredCaseRestaurantTitle.replace(/\s/g, '');
+      const loweredCaseRestaurantName = (restaurant.name || '-').toLowerCase();
+      const jammedRestaurantName = loweredCaseRestaurantName.replace(/\s/g, '');
       const loweredCaseQuery = query.toLowerCase();
       const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
-      return jammedRestaurantTitle.indexOf(jammedQuery) !== -1;
+      return jammedRestaurantName.indexOf(jammedQuery) !== -1;
     });
   },
 };

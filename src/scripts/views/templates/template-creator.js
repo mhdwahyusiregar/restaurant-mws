@@ -56,7 +56,7 @@ const createDaftarRestaurantTemplate = (restaurant) => `
   <div class="restaurant-item" tabindex="0">
     <div class="restaurant-item__header">
       <img class="restaurant-item__header__poster lazyload" alt="${restaurant.name || '-'}"
-        src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" tabindex="0">
+        data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" tabindex="0">
       <div class="restaurant-item__header__rating" tabindex="0">
         <p><span class="restaurant-item__header__rating__score">⭐️ ${restaurant.rating || '-'}</span></p>
       </div>

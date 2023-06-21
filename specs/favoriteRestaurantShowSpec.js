@@ -53,12 +53,14 @@ describe('Showing all favorite restaurants', () => {
           name: 'A',
           rating: 3,
           description: 'Sebuah film A',
+          city: 'medan',
         },
         {
           id: 22,
           name: 'B',
           rating: 4,
           description: 'Sebuah film B',
+          city: 'jakarta',
         },
       ]);
       // eslint-disable-next-line no-new

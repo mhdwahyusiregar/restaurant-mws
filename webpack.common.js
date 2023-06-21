@@ -94,6 +94,9 @@ module.exports = {
       // dontCacheBustURLsMatching: /.\*/,
     }),
     new CleanWebpackPlugin(),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+    }),
   ],
 };

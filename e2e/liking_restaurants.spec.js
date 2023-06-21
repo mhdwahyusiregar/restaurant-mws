@@ -18,7 +18,7 @@ Scenario('Liking one restaurant', async ({ I }) => {
   const firstRestaurantName = await I.grabTextFrom(firstRestaurant);
   I.click(firstRestaurant);
 
-  I.waitForElement('#likeButton', 2);
+  I.waitForElement('#likeButton', 10);
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
@@ -38,7 +38,7 @@ Scenario('Unliking one restaurant', async ({ I }) => {
   const firstRestaurant = locate('h3 a').first();
   const firstRestaurantsNames = await I.grabTextFrom(firstRestaurant);
   I.click(firstRestaurant);
-  I.waitForElement('#likeButton', 2);
+  I.waitForElement('#likeButton', 10);
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
@@ -63,48 +63,40 @@ Scenario('Unliking one restaurant', async ({ I }) => {
 // Untuk kk Reviewers. tolong bantu bagaimana cara menjalankan ,
 // fitur search restaurant di bawah ini, karena saya penasaran banget tetapi ke ketemu2 solusinya
 
-// Scenario('searching restaurants', async ({ I }) => {
-//   I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found');
+Scenario('searching restaurants', async ({ I }) => {
+  I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found');
 
-//   I.amOnPage('/');
+  I.amOnPage('/');
 
-//   I.waitForElement('.restaurant__name a', 2);
-//   I.seeElement('.restaurant__name a');
+  I.waitForElement('.restaurant__name a', 2);
+  I.seeElement('.restaurant__name a');
 
-//   const name = [];
+  const names = [];
 
-//   // eslint-disable-next-line no-plusplus
-//   for (let i = 1; i <= 3; i++) {
-//     I.click(locate('.restaurant__name a').at(i));
-//     I.waitForElement('#likeButton', 2);
-//     I.seeElement('#likeButton');
-//     I.click('#likeButton');
-//     // eslint-disable-next-line no-await-in-loop
-//     name.push(await I.grabTextFrom('.restaurant__name'));
-//     I.amOnPage('/');
-//   }
+  for (let i = 1; i <= 3; i++) {
+    I.click(locate('.restaurant__name a').at(i));
+    I.waitForElement('#likeButton', 10);
+    I.seeElement('#likeButton');
+    I.click('#likeButton');
+    names.push(await I.grabTextFrom('.restaurant__name'));
+    I.amOnPage('/');
+  }
 
-//   I.amOnPage('/#/favorite');
-//   I.waitForElement('#query', 2);
-//   I.seeElement('#query');
+  I.amOnPage('/#/favorite');
+  I.waitForElement('#query', 2);
+  I.seeElement('#query');
 
-//   const searchQuery = name[1].substring(1, 3);
-//   const searchURL = `/#/favorite/${searchQuery}`;
+  const searchQuery = names[1].substring(1, 3);
+  const matchingRestaurants = names.filter((name) => name.indexOf(searchQuery) !== -1);
 
-//   I.fillField('#query', searchQuery);
-//   I.pressKey('Enter', '#query');
+  I.fillField('#query', searchQuery);
+  I.pressKey('Enter');
 
-//   I.waitInUrl(searchURL, 20); // Tunggu hingga URL berubah menjadi `/search?q=<searchQuery>`
-//   I.waitForElement('.restaurant-item', 30);
+  const visibleLikedRestaurants = await I.grabNumberOfVisibleElements('.restaurant-item');
+  assert.strictEqual(matchingRestaurants.length, visibleLikedRestaurants);
 
-//   const matchingRestaurants = await I.grabTextFromAll('.restaurant__name');
-//   const visibleLikedRestaurants = await I.grabNumberOfVisibleElements('.restaurant-item');
-
-//   assert.strictEqual(matchingRestaurants.length, visibleLikedRestaurants);
-
-//   // eslint-disable-next-line no-shadow
-//   matchingRestaurants.forEach(async (name, index) => {
-//     const visibleName = await I.grabTextFrom(locate('.restaurant__name').at(index + 1));
-//     assert.strictEqual(name, visibleName);
-//   });
-// });
+  matchingRestaurants.forEach(async (name, index) => {
+    const visibleName = await I.grabTextFrom(locate('.restaurant__name').at(index + 1));
+    assert.strictEqual(name, visibleName);
+  });
+});
