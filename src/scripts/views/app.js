@@ -24,8 +24,19 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    this._content.innerHTML = await page.render();
-    await page.afterRender();
+
+    try {
+      if (page) {
+        this._content.innerHTML = await page.render();
+        await page.afterRender();
+      } else {
+        // Tampilkan informasi atau arahkan ke halaman utama jika route tidak terdaftar
+        this._content.innerHTML = '<h3>Halaman tidak ditemukan.</h3>';
+      }
+    } catch (error) {
+      // Tampilkan informasi atau arahkan ke halaman utama jika terjadi kesalahan
+      this._content.innerHTML = '<h3>Terjadi kesalahan saat memuat halaman.</h3>';
+    }
   }
 }
 

@@ -27,6 +27,7 @@ const Detail = {
         description: restaurant.description,
         pictureId: restaurant.pictureId,
         rating: restaurant.rating,
+        city: restaurant.city,
       },
     });
   },
